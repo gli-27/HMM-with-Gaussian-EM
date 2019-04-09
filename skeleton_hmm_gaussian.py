@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import numpy as np
 if not __file__.endswith('_hmm_gaussian.py'):
-    print('ERROR: This file is not named correctly! Please name it as Lastname_hmm_gaussian.py (replacing Lastname with your last name)!')
+    print('ERROR: This file is not named correctly!')
     exit(1)
 
 DATA_PATH = "../data" #TODO: if doing development somewhere other than the cycle server (not recommended), then change this to the directory where your data file is (points.dat)
