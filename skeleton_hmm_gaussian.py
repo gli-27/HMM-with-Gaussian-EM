@@ -93,11 +93,9 @@ def init_model(args):
 
         def mstep(self, data, args):
             self.initials = self.gamma[0,:]
-            self.transitions = np.zeros([args.cluster_num, args.cluster_num])
+            self.transitions = np.sum(self.xi, axis=0)
             for t in range(len(data)):
                 for i in range(args.cluster_num):
-                    for j in range(args.cluster_num):
-                        self.transitions[i,j] += self.xi[t,i,j]
                     self.mus[i] = np.dot(self.gamma[:,i].T, data)/np.sum(self.gamma[:,i])
                     if args.tied:
                         self.sigmas += np.dot(np.multiply(self.gamma[:, i].reshape(-1, 1), data[:] - self.mus[i]).T,
