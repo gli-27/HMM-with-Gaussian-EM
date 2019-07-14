@@ -1,8 +1,6 @@
 HMM with Gaussian EM
 --------------------
 Guo Li 
-NetID: gli27 
-CSC 446
 Apr 9 2019 
 --------------------
 
