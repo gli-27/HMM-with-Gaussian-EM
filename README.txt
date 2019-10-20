@@ -7,6 +7,11 @@ Apr 9 2019
 --------------------
 
 
+Usage
+-----
+The main implementation of HMM with Gaussian EM algorithm is in file skeleton_hmm_gaussian.py. Also, you can use smoke_test.py to test the implementation result of HMM_EM algorithm.
+
+
 Briefly Description
 -------------------
 This project is an implementation of one application of hidden markov model, to learn the parameters to get the max log likelihood for current distribution. Learning parameters is to adjust the parameters of the hidden markov model given the oberserved sequence with EM algorithm (aka. Baum-Welch algorithm). There will be a distribution matrix of transition probability, which means the probability for one hidden state to another. Also, we will have an emission probability matrix, which is the probability of current state to the current obersevation variable. In this algorithm, we will have some intermediate variables such as alpha, beta, gamma and xi. Alphas and betas mean the forward and backward probability, which is similar as what we have learned in forward-backward algorithm in HMM. And gamma is the probability of being in one state i at time t for a specific sequence o. Xi is the the probability of being in one state i at time t and being in state j at time t + 1.
